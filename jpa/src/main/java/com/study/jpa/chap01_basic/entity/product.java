@@ -29,11 +29,13 @@ public class product {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+
     @CreationTimestamp //default sysdate임
     @Column(updatable = false) //등록시간이 한번 결정되면 수정이 안되게 막을 수 있는 아노테이션
     private LocalDateTime createDate;
-    @UpdateTimestamp //update 될때 값 따로 안줘도 자동으로 값 매겨줌
 
+
+    @UpdateTimestamp //update 될때 값 따로 안줘도 자동으로 값 매겨줌
     private LocalDateTime updateDate;
 
     public enum Category {
