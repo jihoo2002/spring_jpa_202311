@@ -23,9 +23,9 @@ public class HashTag {
 
     private String tagName; // 해시태그 이름
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) //부모객체에 변화가 발견 -> 자식도 삭제
     @JoinColumn(name = "post_no")
-    private Post post;
+    private Post post; //게시글 번호만 쓰나????
 
 
 }
